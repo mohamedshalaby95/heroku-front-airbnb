@@ -12,7 +12,7 @@ const Profile = () => {
   const [user, setUser] = useState(null);
   async function getuser() {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/reservation/user`, {
+      .get(`${process.env.REACT_APP_BACKEND_URL}reservation/user`, {
         headers: {
           "x-auth-token": await getAuthToken(),
           

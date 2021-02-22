@@ -11,7 +11,7 @@ export default function ReservationScreen() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/reservation/${reservationId}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}reservation/${reservationId}`)
       .then((res) => {
         setReservation(res.data);
       });
@@ -24,7 +24,7 @@ export default function ReservationScreen() {
 
     if (ok) {
       axios
-        .get(`${process.env.REACT_APP_BACKEND_URL}/reservation/${reservationId}/reserve`, {
+        .get(`${process.env.REACT_APP_BACKEND_URL}reservation/${reservationId}/reserve`, {
           headers: {
             "x-auth-token": await getAuthToken(),
           },
